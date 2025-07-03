@@ -4,13 +4,26 @@ import { loadPlaylists, loadUsers, login, logout } from '../../store/playlist.ac
 import { selectAuthenticated, selectCurrentUser, selectLoginError, selectPlaylists } from '../../store/playlist.selectors'
 import { combineLatest, map, Observable, startWith } from 'rxjs';
 import { Playlist } from '../../models/playlist.model';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { PlaylistItemComponent } from '../playlist-item/playlist-item.component';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [
+      CommonModule,
+      ReactiveFormsModule,
+      MatInputModule,
+      MatFormFieldModule,
+      MatButtonModule,
+      PlaylistItemComponent
+    ]
 })
 export class HomeComponent implements OnInit {
   search = new FormControl('');
