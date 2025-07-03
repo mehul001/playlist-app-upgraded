@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "playlist-app:build:production"
+              "buildTarget": "playlist-app:build:production"
             },
             "development": {
-              "browserTarget": "playlist-app:build:development"
+              "buildTarget": "playlist-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "playlist-app:build"
+            "buildTarget": "playlist-app:build"
           }
         },
         "test": {
