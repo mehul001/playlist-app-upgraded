@@ -4,9 +4,10 @@ import { Store } from '@ngrx/store';
 import { selectAuthenticated } from '../../store/playlist.selectors';
 
 @Component({
-  selector: 'app-playlist-item',
-  templateUrl: './playlist-item.component.html',
-  styleUrls: ['./playlist-item.component.scss']
+    selector: 'app-playlist-item',
+    templateUrl: './playlist-item.component.html',
+    styleUrls: ['./playlist-item.component.scss'],
+    standalone: false
 })
 export class PlaylistItemComponent {
   @Input() playlist!: Playlist;
